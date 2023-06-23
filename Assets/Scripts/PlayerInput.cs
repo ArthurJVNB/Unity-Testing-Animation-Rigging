@@ -22,7 +22,7 @@ namespace SW
 			_inputMouseX = Input.GetAxis("Mouse X");
 			_inputMouseY = Input.GetAxis("Mouse Y");
 
-			_movement.Move(_inputY, _inputX, Time.deltaTime, true);
+			_movement.Move(_inputY, _inputX, Time.deltaTime, true, Input.GetKey(KeyCode.LeftShift));
 
 			// test
 			if (Input.GetKeyDown(KeyCode.R))

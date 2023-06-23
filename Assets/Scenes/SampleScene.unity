@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aimConstraint: {fileID: 1730882911}
   _aim: {fileID: 980370360}
-  _smoothStrength: 90
+  _smoothStrength: 10
 --- !u!135 &17730430
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ Transform:
   m_Children:
   - {fileID: 624282977}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &41431734 stripped
 Transform:
@@ -2639,13 +2639,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006306962}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5667157, y: 1.1, z: 1.8124462}
+  m_LocalRotation: {x: 0.000000033832187, y: -3.9334083e-12, z: -4.299953e-11, w: 1}
+  m_LocalPosition: {x: -0.043293495, y: 0.068564996, z: 0.021507619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1941208251}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2006306964
 MonoBehaviour:

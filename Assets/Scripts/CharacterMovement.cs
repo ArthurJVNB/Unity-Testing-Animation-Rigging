@@ -7,7 +7,8 @@ namespace SW
 	[RequireComponent(typeof(CharacterController))]
 	public class CharacterMovement : MonoBehaviour
 	{
-		[SerializeField] private float _speed = 2;
+		[SerializeField] private float _walkSpeed = 1;
+		[SerializeField] private float _runSpeed = 2;
 		[SerializeField] private Transform _camera;
 		[SerializeField] private CharacterAnimator _characterAnimator;
 		[Range(0f, 10f)]
@@ -24,11 +25,11 @@ namespace SW
 			_lastDirection = _controller.transform.forward;
 		}
 
-		public void Move(float speedForward, float speedRight, float deltaTime, bool rotateTowards)
+		public void Move(float speedForward, float speedRight, float deltaTime, bool rotateTowards, bool isRunning)
 		{
 			_translation = CameraRotationXY * new Vector3(speedRight, 0, speedForward);
 			Debug.DrawLine(transform.position, transform.position + _translation * 5, Color.green, .1f);
-			_controller.Move(_speed * deltaTime * _translation);
+			_controller.Move((isRunning ? _runSpeed : _walkSpeed) * deltaTime * _translation);
 
 			if (rotateTowards)
 				Rotate(_translation.normalized, deltaTime);
